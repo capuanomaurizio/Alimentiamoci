@@ -5,6 +5,11 @@
     font-family: 'Fredoka', sans-serif;
     color: #D8D8D8;
     transition: .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    user-select: none;
+}
+
+h1{
+    color: #50af93;
 }
 
 body{
@@ -28,11 +33,21 @@ body{
     justify-content: flex-start;
 }
 
+#logoContainer{
+    width: 9.8vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#logoContainer:hover{
+    background-color: #50af92;
+}
+
 #logo{
     width: 9vh;
+    height: 100%;
     background: url(./auth/images/alogomentiamoci.png);
     background-size: contain;
-    margin-left: .4vw;
 }
 
 #navDx{
@@ -61,6 +76,18 @@ body{
     height: 91vh;
 }
 
+.bodyDivs{
+    background-color: #eeeeee;
+    height: 45%;
+    width: 92.5%;
+    margin: 5% 2.5% 2.5% 5%;
+}
+
+.bodyDivs:hover{
+    background-color: #dadada;
+    transform: scale(1.03);
+}
+
 #bodySx{
     display: flex;
     flex-direction: column;
@@ -68,19 +95,11 @@ body{
 }
 
 #bodyTopSx{
-    background-color: #D8D8D8;
-    height: 45%;
-    width: 92.5%;
     margin: 5% 2.5% 2.5% 5%;
-    border-radius: 40px;
 }
 
 #bodyBotSx{
-    background-color: #D8D8D8;
-    height: 45%;
-    width: 92.5%;
     margin: 2.5% 2.5% 5% 5%;
-    border-radius: 40px;
 }
 
 #bodyDx{
@@ -90,22 +109,66 @@ body{
 }
 
 #bodyTopDx{
-    background-color: #D8D8D8;
-    height: 45%;
-    width: 92.5%;
     margin: 5% 5% 2.5% 2.5%;
-    border-radius: 40px;
 }
 
 #bodyBotDx{
-    background-color: #D8D8D8;
-    height: 45%;
-    width: 92.5%;
     margin: 2.5% 5% 5% 2.5%;
-    border-radius: 40px;
 }
 
-#bodyTopSx:hover, #bodyTopDx:hover, #bodyBotSx:hover, #bodyBotDx:hover{
-    background-color: #cfcfcf;
-    transform: scale(1.03);
+#burgerMenu{
+    background-color: #53BE9E;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 2vh;
+    margin-top: 9vh;
+    margin-right: 1vw;
+    padding: 20px 20px 10px 20px;
+    width: fit-content;
+    z-index: 2;
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+#burgerMenu[data-status="closed"]{
+    transform: translateY(-10%);
+    opacity: 0;
+}
+
+.burgers{
+    padding: .5%;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.burgers:hover{
+    background-color: #50af92;
+}
+
+#aboutContainer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.473);
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#about{
+    background-color: white;
+    width: 45vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #50af93;
 }
