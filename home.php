@@ -1,6 +1,6 @@
 <?php session_start();?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <title>Home di <?php echo $_SESSION["user"]?></title>
     <style>@import url("./style.css");</style>
@@ -62,6 +62,3 @@
     </script>
 </body>
 </html>
-
-
-<!-- <a href="./uscita.php">Termina sessione</a> -->
