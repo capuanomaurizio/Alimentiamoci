@@ -81,6 +81,8 @@ body{
     height: 45%;
     width: 92.5%;
     margin: 5% 2.5% 2.5% 5%;
+    padding: 3vh 2vw;
+    box-sizing: border-box;
 }
 
 .bodyDivs:hover{
@@ -91,7 +93,7 @@ body{
 #bodySx{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 33%;
 }
 
 #bodyTopSx{
@@ -105,7 +107,7 @@ body{
 #bodyDx{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 33%;
 }
 
 #bodyTopDx{
@@ -114,6 +116,23 @@ body{
 
 #bodyBotDx{
     margin: 2.5% 5% 5% 2.5%;
+}
+
+#bodyInfoDiv{
+    height: 100%;
+    width: 34%;
+    background-color: #73F2CC;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#infoDiv{
+    padding: 3vh 2vw;
+    height: 92.5%;
+    width: 95%;
+    background-color: #eeeeee;
+    box-sizing: border-box;
 }
 
 #burgerMenu{
@@ -130,11 +149,13 @@ body{
     z-index: 2;
     transform: translateY(0%);
     opacity: 1;
+    pointer-events: auto;
 }
 
 #burgerMenu[data-status="closed"]{
     transform: translateY(-10%);
     opacity: 0;
+    pointer-events: none;
 }
 
 .burgers{
@@ -158,9 +179,16 @@ body{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.473);
     top: 0;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#aboutContainer[data-status="hidden"]{
+    opacity: 0;
+    pointer-events: none;
 }
 
 #about{
@@ -171,4 +199,9 @@ body{
     justify-content: center;
     align-items: center;
     border: 10px solid #50af93;
+}
+
+.title{
+    font-size: x-large;
+    color: #50af93;
 }

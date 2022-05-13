@@ -1,4 +1,8 @@
-<?php session_start();?>
+<?php 
+    session_start();
+    if(!isset($_SESSION["user"]))
+        header("location: ./index.php");
+?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -30,8 +34,13 @@
             <div id="bodyTopDx" class="bodyDivs"></div>
             <div id="bodyBotDx" class="bodyDivs"></div>
         </div>
+        <div id="bodyInfoDiv">
+            <div id="infoDiv">
+                <span class="title">Le tue info: </span>
+            </div>
+        </div>
     </div>
-    <div id="aboutContainer">
+    <div id="aboutContainer" data-status="hidden">
         <div id="about">
             <h1>MADE BY MAURIZIO CAPUANO</h1>
         </div>
@@ -53,11 +62,11 @@
             }
         }
         function openInfo(){
-            document.getElementById("aboutContainer").style.display = "flex";
+            document.getElementById("aboutContainer").dataset.status = "shown";
             document.getElementById("burgerMenu").dataset.status = "closed";
         }
         function closeInfo(){
-            document.getElementById("aboutContainer").style.display = "none";
+            document.getElementById("aboutContainer").dataset.status = "hidden";
         }
     </script>
 </body>
