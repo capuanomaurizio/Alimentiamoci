@@ -97,11 +97,12 @@ td, table{
 
 .buttonDivs{
     background-color: #ffffff;
-    height: 40vh;
+    height: 41vh;
     width: 33vw;
     padding: 3vh 2vw;
     box-sizing: border-box;
     position: relative;
+    margin: auto;
 }
 
 .arrow{
@@ -120,7 +121,7 @@ td, table{
 
 #infoDiv{
     padding: 3vh 2vw;
-    height: 84vh;
+    height: 86vh;
     width: 28vw;
     background-color: #ffffff;
     border: 10px double #50af93;
