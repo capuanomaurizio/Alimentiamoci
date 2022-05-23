@@ -3,7 +3,7 @@
 *{
     font-weight: 700;
     font-family: 'Fredoka', sans-serif;
-    color: #D8D8D8;
+    color: #ffffff;
     transition: .5s cubic-bezier(0.165, 0.84, 0.44, 1);
     user-select: none;
 }
@@ -34,20 +34,37 @@ body{
 }
 
 #logoContainer{
-    width: 9.8vh;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
-#logoContainer:hover{
-    background-color: #50af92;
+#logoContainer .title{
+    margin-left: 1vw;
+    color: #ffffff;
+    opacity: 0;
+    width: 0;
+    transform: translateX(-15px);
+}
+
+#logoContainer:hover .title{
+    opacity: 1;
+    width: auto;
+    transform: translateX(0px);
 }
 
 #logo{
-    width: 9vh;
+    height: 9vh;
+    width: 9.8vh;
     height: 100%;
     background: url(./auth/images/alogomentiamoci.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#logo:hover{
+    background-color: #50af93;
 }
 
 #navDx{
@@ -69,69 +86,44 @@ body{
     cursor: pointer;
 }
 
-#body{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+#table{
+    width: 100vw;
     height: 91vh;
 }
 
-.bodyDivs{
-    background-color: #eeeeee;
-    height: 45%;
-    width: 92.5%;
-    margin: 5% 2.5% 2.5% 5%;
+td, table{
+    border: 10px solid #73F2CC;
+}
+
+.buttonDivs{
+    background-color: #ffffff;
+    height: 40vh;
+    width: 33vw;
     padding: 3vh 2vw;
     box-sizing: border-box;
+    position: relative;
 }
 
-.bodyDivs:hover{
-    background-color: #dadada;
+.arrow{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0 15px 11px 0;
+    color: #50af93;
+    font-size: xx-large;
+}
+
+.buttonDivs:hover{
+    background-color: #eeeeee;
     transform: scale(1.03);
-}
-
-#bodySx{
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-}
-
-#bodyTopSx{
-    margin: 5% 2.5% 2.5% 5%;
-}
-
-#bodyBotSx{
-    margin: 2.5% 2.5% 5% 5%;
-}
-
-#bodyDx{
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-}
-
-#bodyTopDx{
-    margin: 5% 5% 2.5% 2.5%;
-}
-
-#bodyBotDx{
-    margin: 2.5% 5% 5% 2.5%;
-}
-
-#bodyInfoDiv{
-    height: 100%;
-    width: 34%;
-    background-color: #73F2CC;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 
 #infoDiv{
     padding: 3vh 2vw;
-    height: 92.5%;
-    width: 95%;
-    background-color: #eeeeee;
+    height: 84vh;
+    width: 28vw;
+    background-color: #ffffff;
+    border: 10px double #50af93;
     box-sizing: border-box;
 }
 
@@ -170,7 +162,7 @@ body{
 }
 
 .burgers:hover{
-    background-color: #50af92;
+    background-color: #50af93;
 }
 
 #aboutContainer{
@@ -192,7 +184,7 @@ body{
 }
 
 #about{
-    background-color: white;
+    background-color: #ffffff;
     width: 45vw;
     height: 50vh;
     display: flex;
@@ -201,7 +193,37 @@ body{
     border: 10px solid #50af93;
 }
 
-.title{
+span.title{
+    font-size: xx-large;
+    color: #50af93;
+}
+
+span i{
+    color: #50af93;
+}
+
+div.title{
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+div.content{
+    height: 80%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.text{
     font-size: x-large;
     color: #50af93;
+}
+
+#userImage{
+    width: 100%;
+}
+
+.immaginiDiv{
+    width: 70%;
 }

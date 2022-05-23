@@ -33,7 +33,7 @@
             </div>
             <div class="loginContainer">
                 <form action="questionario1.php" method="POST" id="loginForm" onSubmit="return validaDuplicati()">
-                    <?php if(isset($_POST['nome'])) echo "<span class=\"title\">Benvenuto".$_POST['nome']."!</span><br><br><br>";?>
+                    <?php if(isset($_POST['nome'])) echo "<span class=\"title\">Benvenuto ".$_POST['nome']."!</span><br><br><br>";?>
                     <span class="inputField">* campo obbligatorio</span>
                     <?php session_start();?>
                     <div class="inputFieldDiv"><i class="fa-solid fa-user icon"></i><input type="text" name="username" class="inputField" placeholder="Username *" required pattern="[a-zA-Z0-9]([._-](?![._-])|[a-zA-Z0-9]){3,18}[a-zA-Z0-9]" title="Caratteri alfanumerici e simboli come punto, underscore e trattino. Minimo 5 caratteri e massimo 20."></div>
